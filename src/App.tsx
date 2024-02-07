@@ -20,11 +20,11 @@ function App() {
       case 4:
         return "SIKEE!";
       case 5:
-        return "Okay, you seem like you don't really want to.";
+        return "Okay, seems like you don't really want to.";
       case 6:
         return "Final no?";
       default:
-        return "No.";
+        return "No";
     }
   };
 
