@@ -1,5 +1,5 @@
 import { useState } from "react";
-import boo from "./assets/boo.gif";
+import boo from "./assets/shaking-heart.gif";
 import kiss from "./assets/giphy.gif";
 import Lubby from "./pages/Lubby";
 
@@ -7,32 +7,32 @@ function App() {
   const [hover, setHover] = useState(false);
   const [counts, setCounts] = useState(0);
   const [buttons, setButtons] = useState(false);
-  const [texts, setTexts] = useState("Hey urja, will you be my valentine?");
+  const [texts, setTexts] = useState("Anup, will you be my valentine?");
 
   const stepper = () => {
     switch (counts) {
       case 1:
         return "Are you sure?";
       case 2:
-        return "You might wanna rethink this";
+        return "You might wanna rethink this.";
       case 3:
-        return "Alright, then go ahead";
+        return "Alright, then go ahead.";
       case 4:
-        return "SIKEE";
+        return "SIKEE!";
       case 5:
-        return "Okay, you seem like you don't really want to";
+        return "Okay, you seem like you don't really want to.";
       case 6:
-        return "Final No";
+        return "Final no?";
       default:
-        return "No";
+        return "No.";
     }
   };
 
   const handleText = () => {
     setTexts("");
     setTimeout(() => {
-      setTexts("Yay! Thank you pretty babby, i love you xoxo !!🧡 - sushan");
-    }, 9000);
+      setTexts("Knew it! Happy first Valentine's to us. Many more to go, *potentially, hehe* ❤️");
+    }, 5000);
   };
 
   return (
@@ -48,14 +48,14 @@ function App() {
       <div>
         <div
           style={{
-            marginTop: buttons ? "-350px" : "0px",
+            marginTop: buttons ? "-250px" : "0px",
           }}
           className="transitionalldelay"
         >
           <img
             src={buttons ? kiss : boo}
             style={{
-              height: buttons ? "200px" : "100px",
+              height: buttons ? "300px" : "250px",
               objectFit: "cover",
               background: "white",
               zIndex: "9999999",
@@ -67,10 +67,10 @@ function App() {
             style={
               buttons
                 ? {
-                    background: "red",
+                    background: "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(47,177,242,0.676908263305322) 100%)",
                     zIndex: "9999999",
                     position: "relative",
-                    padding: "4px",
+                    padding: "1rem 1rem",
                     borderRadius: "20px",
                     color: "white",
                   }
@@ -120,7 +120,6 @@ function App() {
             </button>
           </div>
         </div>
-
         <Lubby buttons={buttons} />
       </div>
     </div>
